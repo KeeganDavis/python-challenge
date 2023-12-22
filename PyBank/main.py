@@ -44,5 +44,6 @@ analysis_string = (f"Financial Analysis\n"
 
 print(analysis_string)
 
-        
+with open('analysis/PyBank_analysis.txt', 'w') as file:
+    file.write(analysis_string)
     
