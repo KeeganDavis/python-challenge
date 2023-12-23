@@ -34,13 +34,8 @@ with open(budget_csv, 'r') as csvfile:
 
 average_change = '{:.2f}'.format(sum(monthly_change)/len(monthly_change))
 
-analysis_string = (f"Financial Analysis\n"
-      f"----------------------------\n"
-      f"Total months: {months}\n"
-      f"Total: {total_amount}\n"
-      f"Average Change: {average_change}\n"
-      f"Greatest Increase in Profits: {inc_month} ({greatest_inc})\n"
-      f"Greatest Decrease in Profits: {dec_month} ({greatest_dec})\n")
+analysis_string = (f"Financial Analysis\n----------------------------\nTotal months: {months}\nTotal: {total_amount}\n"
+      f"Average Change: {average_change}\nGreatest Increase in Profits: {inc_month} ({greatest_inc})\nGreatest Decrease in Profits: {dec_month} ({greatest_dec})\n")
 
 print(analysis_string)
 

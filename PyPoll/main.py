@@ -30,16 +30,9 @@ for name in candidate_names:
      analysis_string = f"{name}: {percentage}% ({votes})"
      candidate_anaylsis.append(analysis_string)
      
-final_analysis = (f"Election Results\n"
-                  f"-------------------------\n"
-                  f"Total Votes: {total_votes}\n"
-                  f"-------------------------\n"
-                  f"{candidate_anaylsis[0]}\n"
-                  f"{candidate_anaylsis[1]}\n"
-                  f"{candidate_anaylsis[2]}\n"
-                  f"-------------------------\n"
-                  f"Winner: {winner}\n"
-                  f"-------------------------")
+final_analysis = (f"Election Results\n-------------------------\nTotal Votes: {total_votes}\n-------------------------\n"
+                  f"{candidate_anaylsis[0]}\n{candidate_anaylsis[1]}\n{candidate_anaylsis[2]}\n-------------------------\n"
+                  f"Winner: {winner}\n-------------------------")
 
 print(final_analysis)
 
