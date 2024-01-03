@@ -21,18 +21,18 @@ with open(budget_csv, 'r') as csvfile:
     for row in csvreader:
         months += 1
         total_amount += int(row[1])
-        # find month and profit of greatest profit inc
-        if int(row[1]) > greatest_inc:
-            inc_month = row[0]
-            greatest_inc = int(row[1])
-        # find month and loss of greatest profit dec
-        if int(row[1]) < greatest_dec:
-            dec_month = row[0]
-            greatest_dec = int(row[1])
         # finds the changes in "Profit/Losses" over the entire period
         if previous_row != None:
             change = int(row[1]) - previous_row
             monthly_change.append(change)
+            # find month and greatest profit inc
+            if change > greatest_inc:
+                inc_month = row[0]
+                greatest_inc = change
+            # find month and greatest profit dec
+            if change < greatest_dec:
+                dec_month = row[0]
+                greatest_dec = change
             previous_row = int(row[1])
         else:
             previous_row = int(row[1])
